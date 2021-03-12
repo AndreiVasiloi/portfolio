@@ -1,0 +1,71 @@
+@import "animations";
+
+.hamburgerIcon {
+  height: 50rem;
+  width: 50rem;
+  background-color: #3faf82;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  position: relative;
+}
+
+.icon,
+.icon::after,
+.icon::before {
+  width: 20rem;
+  height: 2rem;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.icon::before,
+.icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.8s;
+}
+
+.icon::before {
+  top: -3rem;
+}
+.icon::after {
+  top: 3rem;
+}
+
+.checkbox {
+  opacity: 0;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.checkbox:checked + .button .icon {
+  background-color: transparent;
+}
+
+.checkbox:checked + .button .icon::before {
+  animation: top-bar-open 1s forwards;
+}
+
+.checkbox:not(:checked) + .button .icon::before {
+  animation: top-bar-close 1s;
+}
+
+.checkbox:checked + .button .icon::after {
+  animation: bottom-bar-open 1s forwards;
+}
+
+.checkbox:not(:checked) + .button .icon::after {
+  animation: bottom-bar-close 1s;
+}
