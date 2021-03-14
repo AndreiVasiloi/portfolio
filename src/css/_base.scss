@@ -1,3 +1,5 @@
+@import "variables";
+
 *,
 *::before,
 *::after {
@@ -9,13 +11,14 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  font-family: $font-ubuntu;
 }
 
 .App {
   display: grid;
   grid-template-rows: 100vh;
   grid-template-columns:
-    [sidebar-start] 20rem [sidebar-end full-start] minmax(6rem, 1fr)
+    [full-start] minmax(6rem, 1fr)
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(6rem, 1fr)
     [full-end];

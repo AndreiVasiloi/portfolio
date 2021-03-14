@@ -18,19 +18,17 @@
 
   &__background {
     height: 100vh;
+    width: 0;
     position: fixed;
     top: 0;
     left: 0;
-    background-image: radial-gradient(
-      $color-primary-light,
-      $color-primary-dark
-    );
+    background-color:  rgba($color-black,0.8);
     z-index: 1000;
-    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: width 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   }
 
   &__toggle {
-    transform: scaleX(140);
+    width: 20vw;
   }
 
   &__nav {
@@ -89,7 +87,7 @@
     &::after {
       width: 3rem;
       height: 4px;
-      background-color: $color-black;
+      background-color: $color-white;
       display: inline-block;
     }
 
