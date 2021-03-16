@@ -1,5 +1,6 @@
 import React from "react";
 import "../../css/_home.scss";
+// import home__img from "../../img/about.jpg";
 
 export default function HomePage() {
   return (
@@ -26,6 +27,9 @@ export default function HomePage() {
         </div>
       </h1>
       <h3 className="home__header-3">a self-taught web developer</h3>
+      {/* <div className="home__img">
+        <img src={home__img} alt="" />
+      </div> */}
       <a href="#projects" className="home__btn">
         my projects
       </a>

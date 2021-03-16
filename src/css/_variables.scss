@@ -15,4 +15,12 @@ $color-black: #000;
 // FONT
 $default-font-size: 1.6rem;
 $font-dosis: "Dosis", sans-serif;
-$font-ubuntu: 'Ubuntu', sans-serif;
+$font-ubuntu: "Ubuntu", sans-serif;
+
+//SECTION BACKGROUNDS
+$bg-white: $color-white;
+$bg-colored: linear-gradient(
+  to right bottom,
+  rgba($color-primary-light, 0.7),
+  $color-primary-dark
+);
