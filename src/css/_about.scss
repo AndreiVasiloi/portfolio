@@ -19,7 +19,9 @@
   &__title {
     font-size: 7rem;
     font-weight: 700;
-    color: $color-primary-dark;
+    background-image: $bg-colored;
+    background-clip: text;
+    color: transparent;
     grid-column: center-start / center-end;
     justify-self: center;
   }

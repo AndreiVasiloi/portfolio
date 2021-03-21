@@ -1,5 +1,9 @@
 @import "variables";
+@import "animations";
 
+svg {
+  overflow: visible;
+}
 .section__skills {
   background-image: $bg-colored;
   grid-column: full-start / full-end;
@@ -39,12 +43,13 @@
       align-items: center;
       padding: 3rem;
 
-      span {
-        color: $color-primary-dark;
-      }
       h5 {
         margin-top: 1rem;
       }
     }
   }
+}
+
+.iconify:hover {
+  animation: rotate 1s ease-in forwards infinite;
 }

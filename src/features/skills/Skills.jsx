@@ -11,6 +11,7 @@ export default function Skills() {
         <Skill icon={"vscode-icons:file-type-css"} text="CSS" />
         <Skill icon={"logos:sass"} text="SASS" />
         <Skill icon={"logos:bootstrap"} text="Bootstrap" />
+        <Skill icon={"logos:semantic-ui"} text="Semantic UI" />
         <Skill icon={"logos:javascript"} text="JavaScript" />
         <Skill icon={"logos:react"} text="React" />
         <Skill icon={"logos:react-router"} text="React Router" />
