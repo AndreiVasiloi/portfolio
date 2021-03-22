@@ -12,6 +12,10 @@ $color-grey-dark-3: #333;
 $color-white: #fff;
 $color-black: #000;
 
+$color-reverto :  rgba(20, 177, 171, 0.8);
+$color-kronstadt-light: rgba(246, 230, 191, 0.8);
+$color-kronstadt-dark: rgba(229, 182, 72, 0.8);
+
 // FONT
 $default-font-size: 1.6rem;
 $font-dosis: "Dosis", sans-serif;
@@ -24,3 +28,14 @@ $bg-colored: linear-gradient(
   rgba($color-primary-light, 0.7),
   $color-primary-dark
 );
+
+
+// RESPONSIVE BREAKPOINTS
+$bp-1000: 62.5em; // 1000px;
+$bp-900: 56.25em; // 900px;
+$bp-800: 50em; // 800px;
+$bp-700: 43.75em; // 700px;
+$bp-600: 37.5em; // 600px;
+$bp-500: 31.25em; // 500px;
+$bp-400: 25em; // 400px;
+$bp-300: 18.75em; // 300px;

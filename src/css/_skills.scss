@@ -15,16 +15,23 @@ svg {
     [center-end] minmax(6rem, 1fr)
     [full-end];
   row-gap: 5rem;
-  padding-bottom: 10rem;
+
+  
+  @media only screen and (min-width: $bp-300) {
+    padding: 5rem 0;
+  }
 }
 
 .skills {
   &__title {
-    font-size: 7rem;
     font-weight: 700;
     color: $color-white;
     grid-column: full-start / full-end;
     justify-self: center;
+
+    @media only screen and (min-width: $bp-300) {
+      font-size: 4rem;
+    }
   }
 
   &__icons {
@@ -36,20 +43,26 @@ svg {
     background-color: $color-white;
 
     &-icon {
-      font-size: 3rem;
       justify-self: center;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 3rem;
 
+       @media only screen and (min-width: $bp-300) {
+      font-size: 4rem;
+    }
+
       h5 {
         margin-top: 1rem;
+        @media only screen and (min-width: $bp-300) {
+          font-size: 2rem;
+        }
       }
     }
   }
 }
 
 .iconify:hover {
-  animation: rotate 1s ease-in forwards infinite;
+  animation: rubberBand 1s ease-in forwards infinite;
 }

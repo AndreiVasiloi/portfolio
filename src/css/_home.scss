@@ -6,25 +6,45 @@
   grid-column: full-start / full-end;
   grid-row: 1/2;
   display: grid;
-  grid-template-columns: 1fr max-content 1fr;
-  grid-row-gap: 2rem;
+  grid-template-columns: 1fr repeat(auto-fit, 1fr) 1fr;
   align-content: center;
+
+  @media only screen and (min-width: $bp-300) {
+    padding: 10rem 0;
+    grid-row-gap: 3rem;
+  }
+  @media only screen and (min-width: $bp-800) {
+    padding: 8rem 0;
+    grid-row-gap: 2.5rem;
+  }
 }
 
 .home {
   &__header {
-    font-size: 10rem;
     font-weight: 700;
-    grid-column: 2/3;
+    grid-column: 1/-1;
+    justify-self: center;
+
+    @media only screen and (min-width: $bp-300) {
+      font-size: 3.5rem;
+    }
+    @media only screen and (min-width: $bp-500) {
+      font-size: 4.5rem;
+    }
+    @media only screen and (min-width: $bp-800) {
+      font-size: 6.5rem;
+    }
 
     &-fr {
       animation: moveInBottom 0.5s ease-out 0.75s;
       animation-fill-mode: backwards;
+      text-align: center;
     }
     &-sr {
       animation: moveInBottom 0.5s ease-out 0.75s;
       animation-fill-mode: backwards;
       animation-delay: 2s;
+      text-align: center;
     }
 
     &-char {
@@ -34,20 +54,32 @@
         animation: rubberBand 1s;
       }
     }
+  }
 
-    &-3 {
-      grid-column: 2/3;
-      font-size: 3rem;
-      color: #1a1e3b;
-      animation: moveInBottom 0.5s ease-out 0.75s;
-      animation-fill-mode: backwards;
-      animation-delay: 3s;
+  &__avatar {
+    grid-column: 1/-1;
+    justify-self: center;
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+    animation-delay: 3s;
+    display: grid;
+    justify-content: center;
+
+    @media only screen and (min-width: $bp-300) {
+      grid-template-columns: repeat(auto-fit, 5rem);
+      grid-template-rows: repeat(auto-fit, 5rem);
+    }
+
+    &-img {
+      width: 100%;
+      grid-column: 2/6;
+      grid-row: 2/6;
     }
   }
 
   &__btn {
-    grid-column: 2/3;
-    justify-self: start;
+    grid-column: 1/-1;
+    justify-self: center;
     border: 2px solid $color-white;
     border-radius: 30px;
     padding: 1rem 4rem;
@@ -58,7 +90,6 @@
 
     &:link,
     &:visited {
-      font-size: 3rem;
       font-weight: 300;
       color: $color-white;
       text-decoration: none;
@@ -71,6 +102,16 @@
       );
       background-size: 220%;
       transition: all 0.4s;
+
+      @media only screen and (min-width: $bp-300) {
+        font-size: 2rem;
+      }
+      @media only screen and (min-width: $bp-500) {
+        font-size: 3rem;
+      }
+      @media only screen and (min-width: $bp-800) {
+        font-size: 3.5rem;
+      }
     }
 
     &:hover,

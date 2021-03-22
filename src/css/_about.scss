@@ -17,20 +17,40 @@
 
 .about {
   &__title {
-    font-size: 7rem;
     font-weight: 700;
     background-image: $bg-colored;
     background-clip: text;
     color: transparent;
     grid-column: center-start / center-end;
     justify-self: center;
+
+    @media only screen and (min-width: $bp-300) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (min-width: $bp-500) {
+      font-size: 3.5rem;
+    }
+    @media only screen and (min-width: $bp-800) {
+      font-size: 5rem;
+    }
   }
 
   &__text {
     color: $color-black;
-    font-size: 2rem;
-    grid-column: center-start / center-end;
+    
     justify-self: center;
     align-self: center;
+
+    @media only screen and (min-width: $bp-300) {
+      font-size: 1.5rem;
+      grid-column: center-start / center-end;
+    }
+    @media only screen and (min-width: $bp-500) {
+      font-size: 1.8rem;
+    }
+    @media only screen and (min-width: $bp-800) {
+      font-size: 2rem;
+      grid-column: col-start 2 / col-end 7;
+    }
   }
 }

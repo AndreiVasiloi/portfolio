@@ -1,0 +1,75 @@
+@import "variables";
+
+.section__projects {
+  background-image: $bg-white;
+  grid-column: full-start / full-end;
+  grid-row: 4/5;
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr)
+    [full-end];
+  row-gap: 5rem;
+
+  @media only screen and (min-width: $bp-300) {
+    padding: 5rem 0;
+  }
+}
+
+.projects {
+  &__title {
+    font-weight: 700;
+    background-image: $bg-colored;
+    background-clip: text;
+    color: transparent;
+    grid-column: full-start / full-end;
+    justify-self: center;
+
+    @media only screen and (min-width: $bp-300) {
+      font-size: 4rem;
+    }
+  }
+
+  &__list {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    column-gap: 3rem;
+
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+      &-text {
+        font-size: 3rem;
+        color: $color-white;
+      }
+    }
+
+    .reverto {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-reverto,
+          $color-reverto
+        ),
+        url("../img/reverto.JPG");
+      background-position: center;
+      background-size: cover;
+      height: 200px;
+    }
+    .kronstadtFood {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-kronstadt-light,
+        $color-kronstadt-dark
+      ), url("../img/kronstadtFood.JPG");
+      background-position: center;
+      background-size: cover;
+      height: 200px;
+    }
+  }
+}
