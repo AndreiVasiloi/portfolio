@@ -1,0 +1,63 @@
+@import "variables";
+
+.footer {
+  background-image: $bg-colored;
+  grid-column: full-start / full-end;
+  height: 30vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__social {
+    background-color: orangered;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-links {
+      display: grid;
+      grid-template-columns: repeat(3,6rem);
+      grid-template-rows: 6rem;
+      column-gap: 2rem;
+    }
+
+    &-link {
+      width: 100%;
+      border: 2px solid $color-black;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem;
+      a:link,
+      a:visited {
+        width: 100%;
+        font-size: 2.5rem;
+        color: $color-black;
+        border-radius: 50%;
+        text-decoration: none;
+        text-align: center;
+        padding: 1rem;
+        display: inline-block;
+      }
+
+      a:hover,
+      a:active {
+       background-color: $color-white;
+      }
+
+      &:hover {
+        border: 2px solid $color-white;
+      }
+    }
+  }
+
+  &__sitemap {
+    background-color: yellowgreen;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

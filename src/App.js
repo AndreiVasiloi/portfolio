@@ -1,5 +1,6 @@
 import "./css/_base.scss";
 import About from "./features/about/About";
+import Footer from "./features/footer/Footer";
 import HomePage from "./features/home/HomePage";
 import NavBar from "./features/navigation/NavBar";
 import Projects from "./features/projects/Projects";
@@ -13,6 +14,7 @@ function App() {
       <About />
       <Skills />
       <Projects/>
+      <Footer/>
     </div>
   );
 }
