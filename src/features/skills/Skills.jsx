@@ -4,7 +4,7 @@ import Skill from "./Skill";
 
 export default function Skills() {
   return (
-    <section className="section__skills">
+    <section className="section__skills" id="skills">
       <h3 className="skills__title">My Skills</h3>
       <div className="skills__icons">
         <Skill icon={"vscode-icons:file-type-html"} text="HTML" />

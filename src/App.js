@@ -1,21 +1,16 @@
 import "./css/_base.scss";
-import About from "./features/about/About";
-import Footer from "./features/footer/Footer";
-import HomePage from "./features/home/HomePage";
-import NavBar from "./features/navigation/NavBar";
-import Projects from "./features/projects/Projects";
-import Skills from "./features/skills/Skills";
+import { Route } from "react-router-dom";
+import Main from "./features/main/Main";
+import Reverto from "./features/projects/reverto/Reverto";
+import KronstadtFood from "./features/projects/kronstadtFood/KronstadtFood";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <HomePage />
-      <About />
-      <Skills />
-      <Projects/>
-      <Footer/>
-    </div>
+    <>
+      <Route path="/" exact component={Main} />
+      <Route path="/reverto" component={Reverto} />
+      <Route path="/kronstadtFood" component={KronstadtFood} />
+    </>
   );
 }
 

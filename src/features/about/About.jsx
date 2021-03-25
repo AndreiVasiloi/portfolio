@@ -3,7 +3,7 @@ import "../../css/_about.scss";
 
 export default function About() {
   return (
-    <section className="section__about">
+    <section className="section__about" id="about">
       <h3 className="about__title">Hi, I’m Andrei. Nice to meet you.</h3>
       <p className="about__text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

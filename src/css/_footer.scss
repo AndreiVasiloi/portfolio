@@ -1,31 +1,44 @@
 @import "variables";
+@import "animations";
 
 .footer {
   background-image: $bg-colored;
   grid-column: full-start / full-end;
-  height: 30vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content;
+  align-items: center;
+  row-gap: 3rem;
+  padding: 7rem 0;
 
   &__social {
-    background-color: orangered;
-    grid-column: 1/2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    height: 15rem;
+
+    @media only screen and (min-width: $bp-300) {
+      grid-column: 1/-1;
+    }
+    @media only screen and (min-width: $bp-700) {
+      grid-column: 1/2;
+    }
+
+    &-header {
+      font-size: 4rem;
+      color: $color-white;
+    }
 
     &-links {
       display: grid;
-      grid-template-columns: repeat(3,6rem);
+      grid-template-columns: repeat(3, 6rem);
       grid-template-rows: 6rem;
       column-gap: 2rem;
     }
 
     &-link {
       width: 100%;
-      border: 2px solid $color-black;
-      border-radius: 50%;
       display: flex;
       justify-content: center;
       padding: 0.5rem;
@@ -33,31 +46,93 @@
       a:visited {
         width: 100%;
         font-size: 2.5rem;
-        color: $color-black;
+        color: $color-white;
+        border: 1px solid $color-white;
         border-radius: 50%;
         text-decoration: none;
         text-align: center;
         padding: 1rem;
         display: inline-block;
       }
-
-      a:hover,
-      a:active {
-       background-color: $color-white;
+      .facebook-link:hover,
+      .facebook-link:active {
+        background-color: $color-facebook;
+        animation: rubberBand 1s;
       }
-
-      &:hover {
-        border: 2px solid $color-white;
+      .linkedin-link:hover,
+      .linkedin-link:active {
+        background-color: $color-linkedin;
+        animation: rubberBand 1s;
+      }
+      .email-link:hover,
+      .email-link:active {
+        background-color: $color-email;
+        animation: rubberBand 1s;
       }
     }
   }
 
   &__sitemap {
-    background-color: yellowgreen;
-    grid-column: 2/3;
+    border-left: 1px solid white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    height: 15rem;
+
+    @media only screen and (min-width: $bp-300) {
+      grid-column: 1/-1;
+    }
+    @media only screen and (min-width: $bp-700) {
+      grid-column: 2/3;
+    }
+
+    &-header {
+      font-size: 2.5rem;
+      color: $color-white;
+    }
+
+    &-links {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    &-link {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: $color-white;
+        font-size: 2rem;
+        border-bottom: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+
+        &::after {
+          content: "";
+          height: 2px;
+          width: 100%;
+          background-color: $color-white;
+          margin-top: 0.5rem;
+          opacity: 0;
+          transition: all 0.5s;
+          transform: scaleX(0);
+        }
+      }
+      &:hover,
+      &:active {
+        &::after {
+          opacity: 1;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  .copyright {
+    grid-column: 1/-1;
+    justify-self: center;
+    color: $color-white;
+    font-size: 1.5rem;
   }
 }

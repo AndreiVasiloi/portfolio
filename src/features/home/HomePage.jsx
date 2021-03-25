@@ -4,7 +4,7 @@ import avatar from "../../img/home_avatar.svg";
 
 export default function HomePage() {
   return (
-    <section className="section__home">
+    <section className="section__home" id="home">
       <h1 className="home__header">
         <div className="home__header-fr">
           <span className="home__header-char home__header-char-fr">S</span>
