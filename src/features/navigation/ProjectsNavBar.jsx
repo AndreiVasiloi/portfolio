@@ -1,8 +1,14 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "../../css/_navigation.scss";
 
-export default function NavBar({ navLinks }) {
+export default function ProjectsNavBar() {
   let [showNav, setShowNav] = useState(true);
+  const navLinks = [
+    { title: "Home", to: "" },
+    { title: "Reverto", to: "reverto" },
+    { title: "Kronstadt Food", to: "kronstadtFood" },
+  ];
 
   return (
     <>
@@ -38,11 +44,11 @@ export default function NavBar({ navLinks }) {
           }
         >
           <ul className="navigation__list">
-            {navLinks.map((link) => (
-              <li className="navigation__item">
-                <a href={`#${link.id}`} className="navigation__link">
+            {navLinks.map((link, index) => (
+              <li className="navigation__item" key={index}>
+                <NavLink to={`/${link.to}`} className="navigation__link">
                   {link.title}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>

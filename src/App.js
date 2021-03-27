@@ -8,8 +8,16 @@ function App() {
   return (
     <>
       <Route path="/" exact component={Main} />
-      <Route path="/reverto" component={Reverto} />
-      <Route path="/kronstadtFood" component={KronstadtFood} />
+
+      <Route
+        path={"/(.+)"}
+        render={() => (
+          <>
+            <Route path="/reverto" component={Reverto} />
+            <Route path="/kronstadtFood" component={KronstadtFood} />
+          </>
+        )}
+      />
     </>
   );
 }

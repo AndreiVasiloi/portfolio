@@ -13,7 +13,7 @@ export default function Projects() {
     <section className="section__projects" id="projects">
       <h3 className="projects__title">My Projects</h3>
       <ProjectsItem
-        itemClass={"reverto"}
+        itemClass={"revertoLink"}
         title="Reverto"
         image={reverto}
         text={revertoText}
@@ -21,7 +21,7 @@ export default function Projects() {
         websiteLink={revertoLink}
       />
       <ProjectsItem
-        itemClass={"kronstadtFood"}
+        itemClass={"kronstadtFoodLink"}
         title="Kronstadt Food"
         image={kronstadtFood}
         text={kronstadtFoodText}

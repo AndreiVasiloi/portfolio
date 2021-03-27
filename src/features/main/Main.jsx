@@ -7,9 +7,16 @@ import Projects from "../projects/Projects";
 import Skills from "../skills/Skills";
 
 export default function Main() {
+  const navLinks = [
+    { title: "Home", id: "home" },
+    { title: "About", id: "about" },
+    { title: "Skills", id: "skills" },
+    { title: "Projects", id: "projects" },
+    { title: "Contact", id: "footer" },
+  ];
   return (
     <div className="App">
-      <NavBar />
+      <NavBar navLinks={navLinks} />
       <HomePage />
       <About />
       <Skills />

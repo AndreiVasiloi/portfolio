@@ -1,15 +1,19 @@
 @import "variables";
 
-.reverto {
+.kronstadtFood {
   &__header {
-    background-image: $bg-colored;
+    background-image: linear-gradient(
+      to right bottom,
+      $color-kronstadt-dark,
+      $color-kronstadt-dark
+    );
   }
   &__link {
-    border: 2px solid $color-primary-dark;
+    border: 2px solid $color-kronstadt-dark;
 
     &:link,
     &:visited {
-      color: $color-primary-dark;
+      color: $color-kronstadt-dark;
     }
 
     &:hover,
@@ -21,19 +25,18 @@
         120deg,
         transparent 0%,
         transparent 50%,
-        $color-primary-dark 50%
+        $color-kronstadt-dark 50%
       );
     }
   }
-
   &__indicator {
-    border: 1px #007965 solid;
+    border: 1px $color-kronstadt-dark solid;
     &.active {
-      background: #007965;
+      background: $color-kronstadt-dark;
     }
   }
 
   &__img {
-    border: 5px solid #007965;
+    border: 5px solid $color-kronstadt-dark;
   }
 }

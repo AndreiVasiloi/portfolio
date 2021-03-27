@@ -1,0 +1,32 @@
+@import "variables";
+
+.gallery {
+  grid-column: center-start / center-end;
+  grid-row: 2/3;
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    border-radius: 5rem;
+    &-img {
+      grid-column: 2/6;
+      grid-row: 1/-1;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 3rem;
+      // border: 5px solid #007965;
+    }
+  }
+}
+
+.indicator {
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+}
+
+.indicator.active {
+  color: #fff;
+}
