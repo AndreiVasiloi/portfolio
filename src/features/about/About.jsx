@@ -6,13 +6,26 @@ export default function About() {
     <section className="section__about" id="about">
       <h3 className="about__title">Hi, I’m Andrei. Nice to meet you.</h3>
       <p className="about__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        My first connection with the technology started from childhood when I
+        was fascinated by video games. A few years ago I decided that I want to
+        spent my time to learn new things about this field, so I started to
+        follow some IT courses. My journey has begun with IT essentials, where I
+        have learned how computers work, and how to maintain them. After this
+        time, I have started to learn about networking. This course was more
+        complex and taught me all about computer networks.
+      </p>
+      <p className="about__text">
+        I liked these courses but I was not very enthusiastic about them, so
+        approximately 2 years ago I decided to give a chance to the programming.
+        This time my learning path was different because I wanted to learn all
+        by myself. The first thing was to learn from www.w3schools.com about
+        HTML and CSS. In the meantime I have applied for an internship offered
+        by Pentalog for React technology, where I have seen the basics of
+        JavaScript and React. The next step was to buy some more advanced
+        courses from Udemy. These courses teached me alot of new things about
+        web development, and they gaved me the skills and confidence to make my
+        own application. Now I have more than 1000 hours of self-taught
+        learning.
       </p>
     </section>
   );
