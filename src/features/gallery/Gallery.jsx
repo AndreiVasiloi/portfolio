@@ -15,7 +15,7 @@ export default function Gallery({ color, project, images }) {
           fontSize: "5rem",
           position: "relative",
           left: "10rem",
-          color: color,
+          color: "#fff",
           cursor: "pointer",
         }}
       >
@@ -28,7 +28,7 @@ export default function Gallery({ color, project, images }) {
           fontSize: "5rem",
           position: "relative",
           right: "10rem",
-          color: color,
+          color: "#fff",
           cursor: "pointer",
         }}
       >

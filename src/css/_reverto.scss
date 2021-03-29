@@ -2,38 +2,38 @@
 
 .reverto {
   &__header {
-    background-image: $bg-colored;
+    //background-image: $bg-colored;
   }
-  &__link {
-    border: 2px solid $color-primary-dark;
+  // &__link {
+  //   //border: 2px solid $color-primary-dark;
 
-    &:link,
-    &:visited {
-      color: $color-primary-dark;
-    }
+  //   &:link,
+  //   &:visited {
+  //     //color: $color-primary-dark;
+  //   }
 
-    &:hover,
-    &:active {
-      background-position: 100%;
-      color: $color-white;
-      transform: translateX(1rem);
-      background-image: linear-gradient(
-        120deg,
-        transparent 0%,
-        transparent 50%,
-        $color-primary-dark 50%
-      );
-    }
-  }
+  //   &:hover,
+  //   &:active {
+  //     background-position: 100%;
+  //     color: $color-white;
+  //     transform: translateX(1rem);
+  //     background-image: linear-gradient(
+  //       120deg,
+  //       transparent 0%,
+  //       transparent 50%,
+  //       $color-primary-dark 50%
+  //     );
+  //   }
+  // }
 
-  &__indicator {
-    border: 1px #007965 solid;
-    &.active {
-      background: #007965;
-    }
-  }
+  // &__indicator {
+  //   border: 1px #007965 solid;
+  //   &.active {
+  //     background: #007965;
+  //   }
+  // }
 
   &__img {
-    border: 5px solid #007965;
+    //border: 5px solid #007965;
   }
 }

@@ -2,15 +2,12 @@
 @import "animations";
 
 .project {
-  background-color: $bg-white;
   display: grid;
   grid-template-columns:
     [full-start] minmax(6rem, 1fr)
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(6rem, 1fr)
     [full-end];
-  row-gap: 3rem;
-  padding: 5rem 0;
 
   &__header {
     grid-column: center-start / center-end;
@@ -19,20 +16,37 @@
     row-gap: 3rem;
     padding: 3rem 0;
     justify-items: center;
+
+    &-container {
+      grid-column: full-start / full-end;
+      background-image: $bg-colored;
+      display: grid;
+      grid-template-columns:
+        [full-start] minmax(6rem, 1fr)
+        [center-start] repeat(
+          8,
+          [col-start] minmax(min-content, 14rem) [col-end]
+        )
+        [center-end] minmax(6rem, 1fr)
+        [full-end];
+      padding: 5rem 0;
+      row-gap: 3rem;
+    }
+
     &-big {
       text-transform: uppercase;
-      color: transparent;
-      background-clip: text;
       font-size: 6rem;
+      color: $color-white;
     }
     &-small {
       font-size: 2rem;
+      color: $color-white;
     }
   }
 
   &__links {
     grid-column: center-start / center-end;
-    justify-self: start;
+    justify-self: center;
     display: grid;
     grid-template-columns: repeat(3, max-content);
     column-gap: 2rem;
@@ -41,11 +55,13 @@
   &__link {
     border-radius: 30px;
     padding: 1rem 5rem;
+    border: 2px solid $color-white;
+
     cursor: pointer;
     &:link,
     &:visited {
       font-weight: 300;
-      color: $color-primary-dark;
+      color: $color-white;
       text-decoration: none;
       text-transform: uppercase;
       background-size: 220%;
@@ -79,6 +95,20 @@
   &__gallery {
     grid-column: full-start / full-end;
   }
+
+  &__text {
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] minmax(6rem, 1fr)
+      [full-end];
+    row-gap: 2rem;
+    background-color: $color-white;
+    padding: 5rem 0;
+  }
+
   &__about {
     grid-column: center-start / center-end;
     display: grid;

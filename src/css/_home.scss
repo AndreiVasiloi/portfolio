@@ -98,7 +98,7 @@
         120deg,
         transparent 0%,
         transparent 50%,
-        $color-white 50%
+        $color-primary-dark 50%
       );
       background-size: 220%;
       transition: all 0.4s;
@@ -117,7 +117,7 @@
     &:hover,
     &:active {
       background-position: 100%;
-      color: $color-primary-dark;
+      color: $color-white;
       transform: translateX(1rem);
     }
   }
