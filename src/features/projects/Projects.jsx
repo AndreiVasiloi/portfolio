@@ -9,9 +9,17 @@ export default function Projects() {
   const revertoLink = "https://managementapp-d440e.firebaseapp.com/";
   const kronstadtFoodText = "Restaurant App";
   const kronstadtFoodLink = "https://kronstadtfood.netlify.app/";
+  const projectsTitle = `My Projects`;
+  const projectsTitleChars = projectsTitle.split("");
   return (
     <section className="section__projects" id="projects">
-      <h3 className="projects__title">My Projects</h3>
+      <h3 className="projects__title">
+        {projectsTitleChars.map((char, index) => (
+          <span key={index} className="projects__title-char">
+            {char}
+          </span>
+        ))}
+      </h3>
       <ProjectsItem
         itemClass={"revertoLink"}
         title="Reverto"

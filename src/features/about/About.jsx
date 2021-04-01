@@ -2,9 +2,18 @@ import React from "react";
 import "../../css/_about.scss";
 
 export default function About() {
+  const aboutTitle = `Hi,I’m Andrei. Nice to meet you.`;
+  const aboutTitleChars = aboutTitle.split("");
   return (
     <section className="section__about" id="about">
-      <h3 className="about__title">Hi, I’m Andrei. Nice to meet you.</h3>
+      {/* <h3 className="about__title">Hi, I’m Andrei. Nice to meet you.</h3> */}
+      <h3 className="about__title">
+        {aboutTitleChars.map((char, index) => (
+          <span key={index} className="about__title-char">
+            {char}
+          </span>
+        ))}
+      </h3>
       <p className="about__text">
         My first connection with the technology started from childhood when I
         was fascinated by video games. A few years ago I decided that I want to

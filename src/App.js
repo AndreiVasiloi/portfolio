@@ -8,7 +8,6 @@ function App() {
   return (
     <>
       <Route path="/" exact component={Main} />
-
       <Route
         path={"/(.+)"}
         render={() => (

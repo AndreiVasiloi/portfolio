@@ -1,6 +1,7 @@
 import React from "react";
 import "../../css/_home.scss";
 import avatar from "../../img/home_avatar.svg";
+import { Link } from "react-scroll";
 
 export default function HomePage() {
   return (
@@ -44,9 +45,9 @@ export default function HomePage() {
       <div className="home__avatar">
         <img src={avatar} alt="avatar" className="home__avatar-img" />
       </div>
-      <a href="#projects" className="home__btn">
+      <Link to="projects" className="home__btn" smooth={true} duration={1000}>
         my projects
-      </a>
+      </Link>
     </section>
   );
 }

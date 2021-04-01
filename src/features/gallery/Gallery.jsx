@@ -10,28 +10,12 @@ export default function Gallery({ color, project, images }) {
     ),
     scale: 1.4,
     prevArrow: (
-      <div
-        style={{
-          fontSize: "5rem",
-          position: "relative",
-          left: "10rem",
-          color: "#fff",
-          cursor: "pointer",
-        }}
-      >
+      <div className="arrow arrow__left">
         <i className="fas fa-chevron-circle-left"></i>
       </div>
     ),
     nextArrow: (
-      <div
-        style={{
-          fontSize: "5rem",
-          position: "relative",
-          right: "10rem",
-          color: "#fff",
-          cursor: "pointer",
-        }}
-      >
+      <div className="arrow arrow__right">
         <i className="fas fa-chevron-circle-right"></i>
       </div>
     ),

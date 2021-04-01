@@ -6,9 +6,14 @@ import Gallery from "../../gallery/Gallery";
 import ProjectsNavBar from "../../navigation/ProjectsNavBar";
 import img1 from "../../../img/reverto/img1.PNG";
 import img2 from "../../../img/reverto/img2.PNG";
+import ProjectFooter from "../../footer/ProjectFooter";
 
 export default function Reverto() {
   const images = [img1, img2];
+  const projectsLinks = [
+    { title: "Home", to: "" },
+    { title: "Kronstadt Food", to: "kronstadtFood" },
+  ];
   return (
     <div className="project">
       <ProjectsNavBar />
@@ -21,14 +26,29 @@ export default function Reverto() {
           </h5>
         </div>
         <div className="project__links">
-          <a href="aa" className="project__link reverto__link">
+          <a
+            href="https://managementapp-d440e.firebaseapp.com/"
+            className="project__link reverto__link"
+            target="_blank"
+            rel="noreferrer"
+          >
             go to website
           </a>
-          <a href="aa" className="project__link reverto__link">
+          <a
+            href="https://github.com/AndreiVasiloi/ManagementApp.git"
+            className="project__link reverto__link"
+            target="_blank"
+            rel="noreferrer"
+          >
             github repository
           </a>
-          <a href="aa" className="project__link reverto__link">
-            youtube video
+          <a
+            href="https://www.youtube.com/watch?v=J4OHbObfZJs"
+            className="project__link reverto__link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            presentation video
           </a>
         </div>
         <div className="project__gallery">
@@ -67,6 +87,7 @@ export default function Reverto() {
           </ul>
         </div>
       </div>
+      <ProjectFooter projectsLinks={projectsLinks} />
     </div>
   );
 }

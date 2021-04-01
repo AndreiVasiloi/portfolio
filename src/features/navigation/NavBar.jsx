@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../css/_navigation.scss";
+import { Link } from "react-scroll";
 
 export default function NavBar({ navLinks }) {
   let [showNav, setShowNav] = useState(true);
@@ -38,11 +39,16 @@ export default function NavBar({ navLinks }) {
           }
         >
           <ul className="navigation__list">
-            {navLinks.map((link) => (
-              <li className="navigation__item">
-                <a href={`#${link.id}`} className="navigation__link">
+            {navLinks.map((link, index) => (
+              <li className="navigation__item" key={index}>
+                <Link
+                  to={`${link.id}`}
+                  className="navigation__link"
+                  smooth={true}
+                  duration={1000}
+                >
                   {link.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

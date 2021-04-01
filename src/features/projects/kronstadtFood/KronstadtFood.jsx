@@ -4,9 +4,14 @@ import ProjectsNavBar from "../../navigation/ProjectsNavBar";
 import "../../../css/_project.scss";
 import img1 from "../../../img/kronstadtFood/img1.PNG";
 import img2 from "../../../img/kronstadtFood/img2.PNG";
+import ProjectFooter from "../../footer/ProjectFooter";
 
 export default function KronstadtFood() {
   const images = [img1, img2];
+  const projectsLinks = [
+    { title: "Home", to: "" },
+    { title: "Reverto", to: "reverto" },
+  ];
   return (
     <div className="project">
       <ProjectsNavBar />
@@ -20,13 +25,28 @@ export default function KronstadtFood() {
           </h5>
         </div>
         <div className="project__links">
-          <a href="aa" className="project__link kronstadtFood__link">
+          <a
+            href="https://kronstadtfood.netlify.app/"
+            className="project__link kronstadtFood__link"
+            target="_blank"
+            rel="noreferrer"
+          >
             go to website
           </a>
-          <a href="aa" className="project__link kronstadtFood__link">
+          <a
+            href="https://github.com/AndreiVasiloi/kronstadtFood.git"
+            className="project__link kronstadtFood__link"
+            target="_blank"
+            rel="noreferrer"
+          >
             github repository
           </a>
-          <a href="aa" className="project__link kronstadtFood__link">
+          <a
+            href="aa"
+            className="project__link kronstadtFood__link"
+            target="_blank"
+            rel="noreferrer"
+          >
             youtube video
           </a>
         </div>
@@ -57,6 +77,7 @@ export default function KronstadtFood() {
           </ul>
         </div>
       </div>
+      <ProjectFooter projectsLinks={projectsLinks} />
     </div>
   );
 }

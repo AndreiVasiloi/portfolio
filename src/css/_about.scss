@@ -18,20 +18,27 @@
 .about {
   &__title {
     font-weight: 700;
-    background-image: $bg-colored;
-    background-clip: text;
-    color: transparent;
     grid-column: center-start / center-end;
     justify-self: center;
 
     @media only screen and (min-width: $bp-300) {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
     }
     @media only screen and (min-width: $bp-500) {
       font-size: 3.5rem;
     }
     @media only screen and (min-width: $bp-800) {
       font-size: 5rem;
+    }
+    &-char {
+      white-space: pre;
+      display: inline-block;
+      position: relative;
+      color: $color-primary-dark;
+      cursor: pointer;
+      &:hover {
+        animation: rubberBand 1s;
+      }
     }
   }
 

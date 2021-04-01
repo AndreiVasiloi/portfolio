@@ -1,5 +1,26 @@
 @import "variables";
 
+// .gallery {
+//   grid-column: center-start / center-end;
+//   grid-row: 2/3;
+
+//   &__item {
+//     display: grid;
+//     grid-template-columns: repeat(6, 1fr);
+//     grid-template-rows: repeat(6, 1fr);
+//     border-radius: 5rem;
+//     &-img {
+//       grid-column: 2/6;
+//       grid-row: 1/-1;
+//       height: 100%;
+//       width: 100%;
+//       object-fit: cover;
+//       border-radius: 3rem;
+//       border: 5px solid $color-white;
+//     }
+//   }
+// }
+
 .gallery {
   grid-column: center-start / center-end;
   grid-row: 2/3;
@@ -15,8 +36,16 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
-      border-radius: 3rem;
       border: 5px solid $color-white;
+      @media only screen and (min-width: $bp-300) {
+        border-radius: 1rem;
+      }
+      @media only screen and (min-width: $bp-500) {
+        border-radius: 3rem;
+      }
+      @media only screen and (min-width: $bp-800) {
+        border-radius: 3rem;
+      }
     }
   }
 }
@@ -31,4 +60,45 @@
 .indicator.active {
   color: $color-primary-dark;
   background: $color-white;
+}
+
+.arrow {
+  cursor: pointer;
+  color: $color-white;
+  @media only screen and (min-width: $bp-300) {
+    font-size: 3rem;
+  }
+  @media only screen and (min-width: $bp-500) {
+    font-size: 4rem;
+  }
+  @media only screen and (min-width: $bp-800) {
+    font-size: 5rem;
+  }
+
+  &__left {
+    position: relative;
+
+    @media only screen and (min-width: $bp-300) {
+      left: 2rem;
+    }
+    @media only screen and (min-width: $bp-500) {
+      left: 3rem;
+    }
+    @media only screen and (min-width: $bp-800) {
+      left: 5rem;
+    }
+  }
+  &__right {
+    position: relative;
+
+    @media only screen and (min-width: $bp-300) {
+      right: 2rem;
+    }
+    @media only screen and (min-width: $bp-500) {
+      right: 3rem;
+    }
+    @media only screen and (min-width: $bp-800) {
+      right: 5rem;
+    }
+  }
 }

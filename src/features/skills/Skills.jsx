@@ -3,9 +3,17 @@ import "../../css/_skills.scss";
 import Skill from "./Skill";
 
 export default function Skills() {
+  const skillsTitle = `My Skills`;
+  const skillsTitleChars = skillsTitle.split("");
   return (
     <section className="section__skills" id="skills">
-      <h3 className="skills__title">My Skills</h3>
+      <h3 className="skills__title">
+        {skillsTitleChars.map((char, index) => (
+          <span key={index} className="skills__title-char">
+            {char}
+          </span>
+        ))}
+      </h3>
       <div className="skills__icons">
         <Skill icon={"vscode-icons:file-type-html"} text="HTML" />
         <Skill icon={"vscode-icons:file-type-css"} text="CSS" />

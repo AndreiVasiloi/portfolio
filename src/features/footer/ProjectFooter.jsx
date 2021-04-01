@@ -1,7 +1,8 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "../../css/_footer.scss";
 
-export default function Footer({ navLinks }) {
+export default function ProjectFooter({ projectsLinks }) {
   return (
     <div className="footer" id="footer">
       <div className="footer__social">
@@ -37,14 +38,14 @@ export default function Footer({ navLinks }) {
       <div className="footer__sitemap">
         <h3 className="footer__sitemap-header">Sitemap</h3>
         <div className="footer__sitemap-links">
-          {navLinks.map((link, index) => (
-            <a
+          {projectsLinks.map((link, index) => (
+            <NavLink
               key={index}
-              href={`#${link.id}`}
+              to={`/${link.to}`}
               className="footer__sitemap-link"
             >
               {link.title}
-            </a>
+            </NavLink>
           ))}
         </div>
       </div>

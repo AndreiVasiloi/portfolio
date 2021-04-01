@@ -14,6 +14,7 @@ export default function Main() {
     { title: "Projects", id: "projects" },
     { title: "Contact", id: "footer" },
   ];
+
   return (
     <div className="App">
       <NavBar navLinks={navLinks} />
@@ -21,7 +22,7 @@ export default function Main() {
       <About />
       <Skills />
       <Projects />
-      <Footer />
+      <Footer navLinks={navLinks} />
     </div>
   );
 }

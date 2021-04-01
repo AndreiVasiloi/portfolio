@@ -27,7 +27,7 @@
 
   &__toggle {
     @media only screen and (min-width: $bp-300) {
-      width: 60vw;
+      width: 70vw;
     }
     @media only screen and (min-width: $bp-400) {
       width: 50vw;
@@ -82,16 +82,24 @@
   }
 
   &__link {
-    &:link,
-    &:visited {
-      font-size: 2.5rem;
-      font-family: $font-dosis;
-      font-weight: 700;
-      padding: 1rem 0;
-      color: $color-white;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
+    font-size: 2.5rem;
+    font-family: $font-dosis;
+    font-weight: 700;
+    padding: 1rem 0;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    // &:link,
+    // &:visited {
+    //   font-size: 2.5rem;
+    //   font-family: $font-dosis;
+    //   font-weight: 700;
+    //   padding: 1rem 0;
+    //   color: $color-white;
+    //   text-decoration: none;
+    //   text-transform: uppercase;
+    // }
   }
 
   &__icon {
@@ -128,10 +136,12 @@
       &::before {
         top: 0;
         transform: rotate(135deg);
+        background-color: $color-white;
       }
       &::after {
         top: 0;
         transform: rotate(-135deg);
+        background-color: $color-white;
       }
     }
   }
