@@ -45,6 +45,15 @@
       @media only screen and (min-width: $bp-800) {
         font-size: 7rem;
       }
+      &-char {
+        white-space: pre;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        &:hover {
+          animation: rubberBand 1s;
+        }
+      }
     }
     &-small {
       color: $color-white;
@@ -160,7 +169,7 @@
         font-size: 2rem;
       }
       @media only screen and (min-width: $bp-800) {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
     }
   }
@@ -197,7 +206,7 @@
           font-size: 2rem;
         }
         @media only screen and (min-width: $bp-800) {
-          font-size: 2.5rem;
+          font-size: 2.2rem;
         }
       }
     }

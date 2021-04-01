@@ -32,7 +32,7 @@ export default function About() {
         by Pentalog for React technology, where I have seen the basics of
         JavaScript and React. The next step was to buy some more advanced
         courses from Udemy. These courses teached me alot of new things about
-        web development, and they gaved me the skills and confidence to make my
+        web development, and they gave me the skills and confidence to make my
         own application. Now I have more than 1000 hours of self-taught
         learning.
       </p>

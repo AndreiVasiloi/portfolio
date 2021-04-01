@@ -16,13 +16,19 @@ export default function KronstadtFood() {
     { title: "Home", to: "" },
     { title: "Reverto", to: "reverto" },
   ];
+  const kronstadtTitle = `Kronstadt Food`;
+  const kronstadtTitleChars = kronstadtTitle.split("");
   return (
     <div className="project">
       <ProjectsNavBar />
       <div className="project__header-container">
         <div className="project__header">
-          <h1 className="project__header-big kronstadtFood__header">
-            Kronstadt Food
+          <h1 className="project__header-big kronstadt__header">
+            {kronstadtTitleChars.map((char, index) => (
+              <span key={index} className="project__header-big-char">
+                {char}
+              </span>
+            ))}
           </h1>
           <h5 className="project__header-small">
             This website was created as a fictional restaurant page.

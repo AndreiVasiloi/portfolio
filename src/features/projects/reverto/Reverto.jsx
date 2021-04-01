@@ -1,7 +1,6 @@
 import React from "react";
 import "../../../css/_project.scss";
 import "../../../css/_gallery.scss";
-import "../../../css/_reverto.scss";
 import Gallery from "../../gallery/Gallery";
 import ProjectsNavBar from "../../navigation/ProjectsNavBar";
 import img1 from "../../../img/reverto/img1.PNG";
@@ -19,12 +18,20 @@ export default function Reverto() {
     { title: "Home", to: "" },
     { title: "Kronstadt Food", to: "kronstadtFood" },
   ];
+  const revertoTitle = `REVERTO`;
+  const revertoTitleChars = revertoTitle.split("");
   return (
     <div className="project">
       <ProjectsNavBar />
       <div className="project__header-container">
         <div className="project__header">
-          <h1 className="project__header-big reverto__header">Reverto</h1>
+          <h1 className="project__header-big reverto__header">
+            {revertoTitleChars.map((char, index) => (
+              <span key={index} className="project__header-big-char">
+                {char}
+              </span>
+            ))}
+          </h1>
           <h5 className="project__header-small">
             This website was created with the intention of helping the small
             businessess with their management.
@@ -71,7 +78,7 @@ export default function Reverto() {
             management. My tool can help you to know what products you have in
             your inventory, and send you a notification if one of your product
             has expired. You can use it as an agenda for your appointments,
-            calculate your profit and alot more.
+            calculate your profit and a lot more.
           </p>
         </div>
         <div className="project__technologies">
