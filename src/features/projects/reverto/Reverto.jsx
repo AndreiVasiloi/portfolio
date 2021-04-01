@@ -6,10 +6,15 @@ import Gallery from "../../gallery/Gallery";
 import ProjectsNavBar from "../../navigation/ProjectsNavBar";
 import img1 from "../../../img/reverto/img1.PNG";
 import img2 from "../../../img/reverto/img2.PNG";
+import img3 from "../../../img/reverto/img3.PNG";
+import img4 from "../../../img/reverto/img4.PNG";
+import img5 from "../../../img/reverto/img5.PNG";
+import img6 from "../../../img/reverto/img6.PNG";
+import img7 from "../../../img/reverto/img7.PNG";
 import ProjectFooter from "../../footer/ProjectFooter";
 
 export default function Reverto() {
-  const images = [img1, img2];
+  const images = [img1, img2, img3, img4, img5, img6, img7];
   const projectsLinks = [
     { title: "Home", to: "" },
     { title: "Kronstadt Food", to: "kronstadtFood" },

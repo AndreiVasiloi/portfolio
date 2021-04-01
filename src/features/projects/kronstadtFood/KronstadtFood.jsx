@@ -4,10 +4,14 @@ import ProjectsNavBar from "../../navigation/ProjectsNavBar";
 import "../../../css/_project.scss";
 import img1 from "../../../img/kronstadtFood/img1.PNG";
 import img2 from "../../../img/kronstadtFood/img2.PNG";
+import img3 from "../../../img/kronstadtFood/img3.PNG";
+import img4 from "../../../img/kronstadtFood/img4.PNG";
+import img5 from "../../../img/kronstadtFood/img5.PNG";
+import img6 from "../../../img/kronstadtFood/img6.PNG";
 import ProjectFooter from "../../footer/ProjectFooter";
 
 export default function KronstadtFood() {
-  const images = [img1, img2];
+  const images = [img1, img2, img3, img4, img5, img6];
   const projectsLinks = [
     { title: "Home", to: "" },
     { title: "Reverto", to: "reverto" },
