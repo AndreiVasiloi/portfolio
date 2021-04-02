@@ -116,32 +116,6 @@
       font-size: 3.5rem;
     }
 
-    // &:link,
-    // &:visited {
-    //   font-weight: 300;
-    //   color: $color-white;
-    //   text-decoration: none;
-    //   text-transform: uppercase;
-    //   background-image: linear-gradient(
-    //     120deg,
-    //     transparent 0%,
-    //     transparent 50%,
-    //     $color-primary-dark 50%
-    //   );
-    //   background-size: 220%;
-    //   transition: all 0.4s;
-
-    //   @media only screen and (min-width: $bp-300) {
-    //     font-size: 2rem;
-    //   }
-    //   @media only screen and (min-width: $bp-500) {
-    //     font-size: 3rem;
-    //   }
-    //   @media only screen and (min-width: $bp-800) {
-    //     font-size: 3.5rem;
-    //   }
-    // }
-
     &:hover,
     &:active {
       background-position: 100%;

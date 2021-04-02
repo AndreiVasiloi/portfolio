@@ -1,5 +1,6 @@
 import React from "react";
 import About from "../about/About";
+import DownloadResume from "../downloadResume/DownloadResume";
 import Footer from "../footer/Footer";
 import HomePage from "../home/HomePage";
 import NavBar from "../navigation/NavBar";
@@ -22,6 +23,7 @@ export default function Main() {
       <About />
       <Skills />
       <Projects />
+      <DownloadResume />
       <Footer navLinks={navLinks} />
     </div>
   );
