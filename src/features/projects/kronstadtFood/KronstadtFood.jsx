@@ -51,14 +51,6 @@ export default function KronstadtFood() {
           >
             github repository
           </a>
-          {/* <a
-            href="aa"
-            className="project__link kronstadtFood__link"
-            target="_blank"
-            rel="noreferrer"
-          >
-            youtube video
-          </a> */}
         </div>
         <div className="project__gallery">
           <Gallery project="kronstadtFood" images={images} />
